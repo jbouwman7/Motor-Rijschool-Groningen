@@ -9,6 +9,7 @@ module.exports = {
         'primary-light': '#D0DECA',
         'white': '#FFFFFF',
         'gray': '#F2F4F3',
+        'dark-gray': '#282828',
       },
       width: {
         '544': '34rem',
