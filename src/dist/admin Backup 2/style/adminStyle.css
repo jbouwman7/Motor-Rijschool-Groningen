@@ -1,0 +1,38 @@
+* {
+    color: #fff;
+}
+
+body {
+    background-color: #0E1320;
+    font-family: montserrat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+table {
+    background-color: #1A212D;
+    border: 5px solid hsl(218, 27%, 14%);
+    color: grey;
+}
+
+h1, label, input, textarea {
+    color: white;
+    background-color: #0E1320;
+}
+
+span, a {
+    color: white;
+    text-decoration: none;
+}
+
+form {
+    margin-top: 25px;
+}
+
+button {
+    margin-top: 25px;
+    width: 250px;
+    height: 50px;
+    background-color: #1A212D;
+}
