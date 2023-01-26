@@ -29,18 +29,6 @@ window.addEventListener('scroll', () => {
     }
 })
 
-// faqs.forEach(faq, i => {
-//     const faq_icon_plus = document.querySelector(`.faq-icon-plus-${i}`);
-//     const faq_icon_min = document.querySelector(`.faq-icon-min-${i}`);
-//     const faq_text = document.querySelector(`.faq-text${i}`);
-//     faq.addEventListener("click", () => {
-//         faq_icon_plus.classList.toggle("hidden");
-//         faq_icon_min.classList.toggle("hidden");
-//         faq_text.classList.toggle("hidden");
-//     }) 
-// });
-
-
 for (let i = 0; i < faqs.length; i++) {
     const faq_icon_plus = document.querySelector(`.faq-icon-plus-${i}`);
     const faq_icon_min = document.querySelector(`.faq-icon-min-${i}`);
@@ -49,5 +37,5 @@ for (let i = 0; i < faqs.length; i++) {
         faq_icon_plus.classList.toggle("hidden");
         faq_icon_min.classList.toggle("hidden");
         faq_text.classList.toggle("hidden");
-    }) 
+    })
 }
