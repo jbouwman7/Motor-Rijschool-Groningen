@@ -1,5 +1,6 @@
 <?php
 $faqs = 5;
+$reviews = 5;
 ?>
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
@@ -10,6 +11,7 @@ $faqs = 5;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./dist/style.css">
     <!-- <script src="https://cdn.tailwindcss.com/%22%3E"></script> -->
+    <script src="https://kit.fontawesome.com/b17e2f4f7d.js" crossorigin="anonymous"></script>
     <script src="js/app.js" defer></script>
     <title>Motor Rijschool Groningen</title>
 </head>
@@ -19,7 +21,7 @@ $faqs = 5;
      -------HEADER------- 
      --------------------  -->
     <nav class="fixed z-50 w-full nav-bar">
-        <div class="max-w-7xl mx-auto px-4">
+        <div class="max-w-7xl mx-auto px-6">
             <div class="flex justify-between">
                 <div class="flex justify-between w-full space-x-7">
                     <!-- Website Logo -->
@@ -33,6 +35,7 @@ $faqs = 5;
                         <a href="#faq" class="nav-text-desktop">Q&A</a>
                         <a href="#review" class="nav-text-desktop">Reviews</a>
                         <a href="#contact" class="nav-text-desktop">Contact</a>
+                        <a href="#partner" class="nav-text-desktop">Partnership</a>
                     </div>
                 </div>
                 <!-- Mobile menu button -->
@@ -53,6 +56,7 @@ $faqs = 5;
                 <li><a href="#faq" class="nav-text-mobile link">Q&A</a></li>
                 <li><a href="#review" class="nav-text-mobile link">Reviews</a></li>
                 <li><a href="#contact" class="nav-text-mobile link">Contact</a></li>
+                <li><a href="#partner" class="nav-text-desktop">Partnership</a></li>
             </ul>
         </div>
     </nav>
@@ -111,21 +115,18 @@ $faqs = 5;
                                 <!-- Expand/collapse question button -->
                                 <button type="button" class="flex w-full faq items-start justify-between text-left text-gray-900" aria-controls="faq-0" aria-expanded="false">
                                     <span class="text-base font-semibold leading-7">What&#039;s the best thing about
-                                        Switzerland?</span>
+                                        Switzerland?
+                                    </span>
                                     <span class="ml-6 flex h-7 items-center">
-                                        <!-- min -->
-                                        <svg class="hidden h-6 w-6 faq-icon-min-<?= $i ?> text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
-                                        </svg>
                                         <!-- plus -->
-                                        <svg class="h-6 w-6 faq-icon-plus-<?= $i ?> text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                        <svg class="h-6 w-6 f-icon f-icon-<?= $i ?> text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
                                         </svg>
                                     </span>
                                 </button>
                             </dt>
                             <dd class="mt-2 pr-12" id="faq-0">
-                                <p class="text-base leading-7 text-gray-600 faq-text-<?= $i ?> hidden">I don&#039;t know, but the flag is a big plus.
+                                <p class="text-base leading-7 text-gray-600 f-text f-text-<?= $i ?> hidden">I don&#039;t know, but the flag is a big plus.
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam
                                     fugiat.</p>
                             </dd>
@@ -139,7 +140,7 @@ $faqs = 5;
     <!-- -------------
     -----revieuws-----
     -------------- -->
-    <div class="bg-white">
+    <div class="bg-white" id="review">
         <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:py-40 lg:px-8">
             <h2 class="sr-only">Customer Reviews</h2>
 
@@ -153,11 +154,9 @@ $faqs = 5;
                         <p><time datetime="2021-07-16">July 16, 2021</time></p>
 
                         <div class="mt-4 flex items-center">
-                            <!--
-              Heroicon name: mini/star
-
-              Active: "text-yellow-400", Default: "text-gray-300"
-            -->
+                            <!-- Heroicon name: mini/star
+                                Active: "text-yellow-400", Default: "text-gray-300"
+                            -->
                             <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                 <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
                             </svg>
@@ -190,6 +189,7 @@ $faqs = 5;
                     </div>
                 </div>
 
+                <!-- --------- -->
                 <div class="flex space-x-4 text-sm text-gray-500">
                     <div class="flex-none py-10">
                         <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80" alt="" class="h-10 w-10 rounded-full bg-gray-100">
@@ -246,7 +246,7 @@ $faqs = 5;
     <!-- ------------
     -----contact-----
     ------------- -->
-    <div class="bg-gray">
+    <div class="bg-gray" id="contact">
         <div class="mx-auto max-w-7xl py-16 px-6 sm:py-24 lg:px-8">
             <h2 class="sr-only">Contact us</h2>
 
@@ -291,44 +291,42 @@ $faqs = 5;
                     <dl class="mt-8 space-y-6">
                         <dt><span class="sr-only">Phone number</span></dt>
                         <dd class="flex text-base ">
-                            <!-- Heroicon name: outline/phone -->
-                            <svg class="h-6 w-6 flex-shrink-0 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
-                            </svg>
-                            <span class="ml-3">+1 (555) 123-4567</span>
+                            <a href="tel:0630559016" class="hover:text-secondary flex">
+                                <!-- Heroicon name: outline/phone -->
+                                <svg class="h-6 w-6 flex-shrink-0 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                                </svg>
+                                <span class="ml-3">06 3055 9016</span>
+                            </a>
                         </dd>
                         <dt><span class="sr-only">Email</span></dt>
-                        <dd class="flex text-base ">
-                            <!-- Heroicon name: outline/envelope -->
-                            <svg class="h-6 w-6 flex-shrink-0 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-                            </svg>
-                            <span class="ml-3">support@workcation.com</span>
+                        <dd class="flex text-base">
+                            <a href="mailto:info@rijschoolsanderhoekstra.nl" class="hover:text-secondary flex">
+                                <!-- Heroicon name: outline/envelope -->
+                                <svg class="h-6 w-6 flex-shrink-0 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                                </svg>
+                                <span class="ml-3">info@rijschoolsanderhoekstra.nl</span>
+                            </a>
                         </dd>
                     </dl>
                     <ul role="list" class="mt-8 flex space-x-12">
                         <li>
-                            <a class="hover:text-secondary" href="#">
+                            <a class="hover:text-secondary" href="https://nl-nl.facebook.com/rijschoolsanderhoekstra">
                                 <span class="sr-only">Facebook</span>
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" aria-hidden="true">
-                                    <path d="M22.258 1H2.242C1.556 1 1 1.556 1 2.242v20.016c0 .686.556 1.242 1.242 1.242h10.776v-8.713h-2.932V11.39h2.932V8.887c0-2.906 1.775-4.489 4.367-4.489 1.242 0 2.31.093 2.62.134v3.037l-1.797.001c-1.41 0-1.683.67-1.683 1.653v2.168h3.362l-.438 3.396h-2.924V23.5h5.733c.686 0 1.242-.556 1.242-1.242V2.242C23.5 1.556 22.944 1 22.258 1" fill="currentColor" />
-                                </svg>
+                                <i class="fab fa-facebook fa-2xl"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/rijschoolsanderhoekstra/?hl=en" class="hover:text-secondary">
+                                <span class="sr-only">Instagram page</span>
+                                <i class="fab fa-instagram fa-2xl"></i>
                             </a>
                         </li>
                         <li>
                             <a class="hover:text-secondary" href="#">
-                                <span class="sr-only">GitHub</span>
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" aria-hidden="true">
-                                    <path d="M11.999 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.386.6.11.819-.26.819-.578 0-.284-.01-1.04-.017-2.04-3.337.724-4.042-1.61-4.042-1.61-.545-1.386-1.332-1.755-1.332-1.755-1.09-.744.082-.73.082-.73 1.205.086 1.838 1.238 1.838 1.238 1.07 1.833 2.81 1.304 3.493.996.109-.775.419-1.303.762-1.603C7.145 17 4.343 15.97 4.343 11.373c0-1.31.468-2.382 1.236-3.22-.124-.304-.536-1.524.118-3.176 0 0 1.007-.323 3.3 1.23.956-.266 1.983-.4 3.003-.404 1.02.005 2.046.138 3.005.404 2.29-1.553 3.296-1.23 3.296-1.23.655 1.652.243 2.872.12 3.176.77.838 1.233 1.91 1.233 3.22 0 4.61-2.806 5.624-5.478 5.921.43.37.814 1.103.814 2.223 0 1.603-.015 2.898-.015 3.291 0 .321.217.695.825.578C20.565 21.796 24 17.3 24 12c0-6.627-5.373-12-12.001-12" fill="currentColor" />
-                                </svg>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="hover:text-secondary" href="#">
-                                <span class="sr-only">Twitter</span>
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" aria-hidden="true">
-                                    <path d="M7.548 22.501c9.056 0 14.01-7.503 14.01-14.01 0-.213 0-.425-.015-.636A10.02 10.02 0 0024 5.305a9.828 9.828 0 01-2.828.776 4.94 4.94 0 002.165-2.724 9.867 9.867 0 01-3.127 1.195 4.929 4.929 0 00-8.391 4.491A13.98 13.98 0 011.67 3.9a4.928 4.928 0 001.525 6.573A4.887 4.887 0 01.96 9.855v.063a4.926 4.926 0 003.95 4.827 4.917 4.917 0 01-2.223.084 4.93 4.93 0 004.6 3.42A9.88 9.88 0 010 20.289a13.941 13.941 0 007.548 2.209" fill="currentColor" />
-                                </svg>
+                                <span class="sr-only">whatsapp</span>
+                                <i class="fab fa-whatsapp fa-2xl"></i>
                             </a>
                         </li>
                     </ul>
@@ -381,13 +379,81 @@ $faqs = 5;
                             </div>
                         </div>
                         <div class="sm:col-span-2 sm:flex sm:justify-end">
-                            <button type="submit" class="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-primary px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 sm:w-auto">Submit</button>
+                            <button type="submit" class="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-primary px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-opacity-90 hover:text-neutral-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 sm:w-auto">Submit</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+    <!-- ------------
+    -----footer -----
+    ------------- -->
+
+    <footer class="p-4 bg-primary-light sm:p-6">
+        <div class="mx-auto max-w-7xl py-16 px-6 sm:py-24 lg:px-8">
+            <div class="md:flex md:justify-between ">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="flex items-center">
+                        <img src="img/logo.png" class="h-8 mr-3" alt="FlowBite Logo" />
+                        <span class="self-center text-2xl font-semibold">Motor Rijschool Groningen</span>
+                    </a>
+                </div>
+                <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                    <div>
+                        <ul class="text-gray-600">
+                            <li class="mb-4">
+                                <a href="#pakketten" class="hover:underline">Pakketten</a>
+                            </li>
+                            <li>
+                                <a href="#about" class="hover:underline">Over mij</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="text-gray-600">
+                            <li class="mb-4">
+                                <a href="#faq" class="hover:underline ">Q & A</a>
+                            </li>
+                            <li>
+                                <a href="#review" class="hover:underline">Review</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="text-gray-600">
+                            <li class="mb-4">
+                                <a href="#contact" class="hover:underline">Contact</a>
+                            </li>
+                            <li>
+                                <a href="#partner" class="hover:underline">Partnership</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-6 border-primary sm:mx-auto lg:my-8" />
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <span class="text-sm text-gray-500 sm:text-center">© 2023 <a href="#" class="hover:underline">Motor RIjschool Groningen</a>. All Rights Reserved.
+                </span>
+                <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+                    <a href="https://nl-nl.facebook.com/rijschoolsanderhoekstra" class="text-gray-500 hover:text-gray-900">
+                        <span class="sr-only">Facebook</span>
+                        <i class="fab fa-facebook fa-lg"></i>
+                    </a>
+                    <a href="https://www.instagram.com/rijschoolsanderhoekstra/?hl=en" class="text-gray-500 hover:text-gray-900">
+                        <span class="sr-only">Instagram page</span>
+                        <i class="fab fa-instagram fa-lg"></i>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-gray-900">
+                        <span class="sr-only">whatsapp</span>
+                        <i class="fab fa-whatsapp fa-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 
 
 

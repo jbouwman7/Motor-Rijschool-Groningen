@@ -4,7 +4,8 @@ const menu = document.querySelector(".mobile-menu");
 const nav = document.querySelector('.nav-bar');
 
 const faqs = document.querySelectorAll(".faq");
-
+const f_all_icon = document.querySelectorAll(`.f-icon`);
+const f_all_text = document.querySelectorAll(`.f-text`);
 
 
 btn.addEventListener("click", () => {
@@ -30,12 +31,22 @@ window.addEventListener('scroll', () => {
 })
 
 for (let i = 0; i < faqs.length; i++) {
-    const faq_icon_plus = document.querySelector(`.faq-icon-plus-${i}`);
-    const faq_icon_min = document.querySelector(`.faq-icon-min-${i}`);
-    const faq_text = document.querySelector(`.faq-text-${i}`);
+    const f_icon = document.querySelector(`.f-icon-${i}`);
+    const f_text = document.querySelector(`.f-text-${i}`);
     faqs[i].addEventListener("click", () => {
-        faq_icon_plus.classList.toggle("hidden");
-        faq_icon_min.classList.toggle("hidden");
-        faq_text.classList.toggle("hidden");
+        if (!f_icon.classList.contains('rotate-45')) {
+            f_all_icon.forEach(icon => {
+                icon.classList.remove("rotate-45");
+            });
+            f_all_text.forEach(text => {
+                text.classList.add("hidden");
+            });
+            f_icon.classList.add("rotate-45");
+            f_text.classList.remove("hidden");
+        } else {
+            f_icon.classList.remove("rotate-45");
+            f_text.classList.add("hidden");
+        }
     })
 }
+
