@@ -1,21 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer components {
     .nav-text-desktop {
-        @apply text-base font-medium text-white hover:text-gray;
+        @apply text-base font-medium text-white hover: text-gray;
     }
 
-    .nav-text-mobile{
-        @apply block text-sm px-2 py-4 text-white hover:text-dark-gray transition duration-300 pl-5;
+    .nav-text-mobile {
+        @apply block text-sm px-2 py-4 text-white hover: text-dark-gray transition duration-300 pl-5;
     }
 
-    .nav-bg{
+    .nav-bg {
         @apply bg-dark-gray bg-opacity-70;
     }
 
-    .nav-visible{
+    .nav-visible {
         @apply bg-dark-gray;
+    }
+}
+
+@layer utilities {
+    .clip {
+        clip-path: polygon(0 0, 78% 0, 100% 100%, 0% 100%);
+    }
+}
+
+@layer base {
+    html {
+        font-family: 'Montserrat', sans-serif;
     }
 }

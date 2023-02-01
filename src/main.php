@@ -77,27 +77,21 @@ $reviews = 5;
     <!-- -------------
     -----ABOUT ME-----
     -------------- -->
-    <div class="relative overflow-hidden bg-white" id="about">
-        <div class="mx-auto max-w-7xl">
-            <div class="relative z-10 bg-white pb-8 sm:pb-20 md:pb-24 lg:w-full lg:max-w-2xl lg:pb-28 xl:pb-32">
-                <svg class="absolute inset-y-0 right-0 hidden w-48 translate-x-1/2 transform text-white lg:block min-h-screen" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-                    <polygon points="50,0 100,0 50,100 0,100" />
-                </svg>
-                <main class="mx-auto max-w-7xl px-6 max-md:mt-12 max-lg:mt-16 lg:px-8">
-                    <div class="sm:text-center lg:text-left">
-                        <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
-                            <span class="block xl:inline">Data to enrich your</span>
-                            <span class="block text-primary xl:inline">online business</span>
-                        </h1>
-                        <p class="mt-3 text-base text-gray-500 sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5 md:text-xl lg:mx-0">
-                            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.
-                            Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
-                    </div>
-                </main>
+    <div class="flex md:flex-row-reverse flex-col w-full">
+        <main class="my-auto max-w-7xl px-6 max-md:my-8 lg:px-8">
+            <div class="sm:text-center md:text-right">
+                <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl md:text-5xl">
+                    <span class="block xl:inline">Data to enrich your</span>
+                    <span class="block text-primary xl:inline">online business</span>
+                </h1>
+                <p class="mt-3 text-base text-gray-500 sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5 md:text-xl md:mr-0">
+                    Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.
+                    Elit sunt amet fugiat veniam occaecat fugiat aliqua.
+                </p>
             </div>
-        </div>
-        <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-            <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:h-full lg:w-full" src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" alt="">
+        </main>
+        <div class="lg:h-full lg:w-1/2 md:clip w-full">
+            <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:h-full" src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" alt="">
         </div>
     </div>
     <!-- ---------
@@ -119,14 +113,14 @@ $reviews = 5;
                                     </span>
                                     <span class="ml-6 flex h-7 items-center">
                                         <!-- plus -->
-                                        <svg class="h-6 w-6 f-icon f-icon-<?= $i ?> text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                        <svg class="h-6 w-6 f-icon f-icon-<?= $i ?> text-primary transform transition-transform ease-in duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
                                         </svg>
                                     </span>
                                 </button>
                             </dt>
                             <dd class="mt-2 pr-12" id="faq-0">
-                                <p class="text-base leading-7 text-gray-600 f-text f-text-<?= $i ?> hidden">I don&#039;t know, but the flag is a big plus.
+                                <p class="text-base leading-7 text-gray-600 f-text f-text-<?= $i ?> transform transition-transform ease-in-out delay-500 hidden">I don&#039;t know, but the flag is a big plus.
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam
                                     fugiat.</p>
                             </dd>
@@ -142,7 +136,7 @@ $reviews = 5;
     -------------- -->
     <div class="bg-white" id="review">
         <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:py-40 lg:px-8">
-            <h2 class="sr-only">Customer Reviews</h2>
+            <h2 class="text-2xl font-bold leading-10 tracking-tight text-gray-900 mb-5">Reviews</h2>
 
             <div class="-my-10">
                 <div class="flex space-x-4 text-sm text-gray-500">
@@ -154,32 +148,12 @@ $reviews = 5;
                         <p><time datetime="2021-07-16">July 16, 2021</time></p>
 
                         <div class="mt-4 flex items-center">
-                            <!-- Heroicon name: mini/star
-                                Active: "text-yellow-400", Default: "text-gray-300"
-                            -->
-                            <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
-                            </svg>
-
-                            <!-- Heroicon name: mini/star -->
-                            <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
-                            </svg>
-
-                            <!-- Heroicon name: mini/star -->
-                            <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
-                            </svg>
-
-                            <!-- Heroicon name: mini/star -->
-                            <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
-                            </svg>
-
-                            <!-- Heroicon name: mini/star -->
-                            <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
-                            </svg>
+                            <?php for ($i = 0; $i < 5; $i++) : ?>
+                                <!-- minister geel -->
+                                <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+                                </svg>
+                            <?php endfor ?>
                         </div>
                         <p class="sr-only">5 out of 5 stars</p>
 
@@ -199,34 +173,12 @@ $reviews = 5;
                         <p><time datetime="2021-07-12">July 12, 2021</time></p>
 
                         <div class="mt-4 flex items-center">
-                            <!--
-              Heroicon name: mini/star
-
-              Active: "text-yellow-400", Default: "text-gray-300"
-            -->
-                            <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
-                            </svg>
-
-                            <!-- Heroicon name: mini/star -->
-                            <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
-                            </svg>
-
-                            <!-- Heroicon name: mini/star -->
-                            <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
-                            </svg>
-
-                            <!-- Heroicon name: mini/star -->
-                            <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
-                            </svg>
-
-                            <!-- Heroicon name: mini/star -->
-                            <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
-                            </svg>
+                            <?php for ($i = 0; $i < 5; $i++) : ?>
+                                <!-- minister geel -->
+                                <svg class="text-yellow-400 h-5 w-5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+                                </svg>
+                            <?php endfor ?>
                         </div>
                         <p class="sr-only">5 out of 5 stars</p>
 
@@ -235,13 +187,9 @@ $reviews = 5;
                         </div>
                     </div>
                 </div>
-
-                <!-- More reviews... -->
             </div>
         </div>
     </div>
-
-
 
     <!-- ------------
     -----contact-----

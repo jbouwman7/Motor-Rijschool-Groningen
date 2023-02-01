@@ -12,13 +12,6 @@ module.exports = {
         'gray': '#F2F4F3',
         'dark-gray': '#282828',
       },
-      width: {
-        '544': '34rem',
-        '333': '20.8rem',
-      },
-      // fonts: {
-      //   'main': 'montserrat',
-      // },
     },
   },
   plugins: [
