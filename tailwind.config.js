@@ -12,6 +12,9 @@ module.exports = {
         'gray': '#F2F4F3',
         'dark-gray': '#282828',
       },
+      heights: {
+        '120': '30rem',
+      }
     },
   },
   plugins: [

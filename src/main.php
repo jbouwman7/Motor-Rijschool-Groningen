@@ -77,7 +77,7 @@ $reviews = 5;
     <!-- -------------
     -----ABOUT ME-----
     -------------- -->
-    <div class="flex md:flex-row-reverse flex-col w-full">
+    <div class="flex md:flex-row-reverse flex-col w-full md:justify-between" id="about">
         <main class="my-auto max-w-7xl px-6 max-md:my-8 lg:px-8">
             <div class="sm:text-center md:text-right">
                 <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl md:text-5xl">
@@ -90,8 +90,8 @@ $reviews = 5;
                 </p>
             </div>
         </main>
-        <div class="lg:h-full lg:w-1/2 md:clip w-full">
-            <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:h-full" src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" alt="">
+        <div class="md:clip md:max-w-1/3">
+            <img class="h-56 w-full object-cover sm:h-72 md:h-96 xl:h-[30rem]" src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" alt="">
         </div>
     </div>
     <!-- ---------

@@ -6,11 +6,11 @@
 
 @layer components {
     .nav-text-desktop {
-        @apply text-base font-medium text-white hover: text-gray;
+        @apply text-base font-medium text-white hover:text-gray;
     }
 
     .nav-text-mobile {
-        @apply block text-sm px-2 py-4 text-white hover: text-dark-gray transition duration-300 pl-5;
+        @apply block text-sm px-2 py-4 text-white hover:text-dark-gray transition duration-300 pl-5;
     }
 
     .nav-bg {
