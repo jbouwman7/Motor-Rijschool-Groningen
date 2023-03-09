@@ -1,32 +1,26 @@
-/** @type {import('tailwindcss').Config} */
+/** @type { import('tailwindcss').Config } */
 module.exports = {
-  content: ["./dist/**/*.{html,js, php}"],
+  content: ["./src/**/*.{html,js,css,php}"],
   theme: {
     extend: {
       colors: {
-        'primary': '#D09456',
-        'secondary': '#E6372F',
-        'neutral': '#EAB538',
+        'primary': '#A1C741',
+        'secondary': '#87BD25',
+        'primary-light': '#D0DECA',
+        'white': '#FFFFFF',
+        'gray': '#F2F4F3',
+        'dark-gray': '#282828',
       },
-      fontFamily: {
-        'stack': ['Arbotek', 'sans-serif'],
+      width: {
+        '544': '34rem',
+        '333': '20.8rem',
       },
-      fontSize: {
-        'sm': '0.8rem',
-        'base': '1rem',
-        'xl': '1.25rem',
-        '2xl': ['1.5rem', {
-          lineHeight: '2rem',
-          letterSpacing: '-0.01em',
-          fontWeight: '500',
-        }],
-        '3xl': ['1.875rem', {
-          lineHeight: '2.25rem',
-          letterSpacing: '-0.02em',
-          fontWeight: '700',
-        }],
-      }
+      // fonts: {
+      //   'main': 'montserrat',
+      // },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }

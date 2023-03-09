@@ -9,13 +9,13 @@ function allPackages(PDO $pdo) {
     return $statement->fetchAll(PDO::FETCH_ASSOC);
 }
 
-function createPackage(PDO $pdo, $record) {
+function createPackage(PDO $pdo, $record, $image) {
     $query = "INSERT INTO packages (title, description, image) VALUES (:title, :description, :image)";
 
     $statement = $pdo->prepare($query);
     $statement->bindValue(':title', $record['title'], PDO::PARAM_STR);
     $statement->bindValue(':description', $record['description'], PDO::PARAM_STR);
-    $statement->bindValue(':image', $record['image'], PDO::PARAM_STR);
+    $statement->bindValue(':image', $image, PDO::PARAM_STR);
 
     $statement->execute();
     $record['id'] = $pdo->lastInsertId();
